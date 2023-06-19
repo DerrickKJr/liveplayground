@@ -4,6 +4,6 @@
   "lang": "en",
   "name": "liveplayground",
   "short_name": "liveplayground",
-  "start_url": "/liveplayground?utm_source=web_app_manifest",
+  "start_url": "/?utm_source=web_app_manifest",
   "orientation": "portrait"
 }
