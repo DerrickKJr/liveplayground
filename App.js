@@ -1,10 +1,32 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, {useState, useRef} from 'react';
+import { StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 
+var colorIndex = 0;
 export default function App() {
+  //"#6abef0"
+  const [bgColor, setbgColor] = useState(changeBgColor);
+  function changeBgColor(){
+    var color = "#6abef0";
+    switch (colorIndex++) {
+      case 0:
+        color = "#ec3535";
+        break;
+      case 1:
+        color = "#6abef0";
+        break;
+      case 2:
+        color = "#23d172";
+        colorIndex = 0;
+        break;
+      default:
+        break;
+    }
+    return color;
+  }
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your!</Text>
+      <TouchableOpacity onPress={() => setbgColor(changeBgColor())}style={{width: 150, height: 50, backgroundColor: bgColor, borderRadius: "20px"}}><Text style={{display: "flex",margin: "auto", fontSize:"30px", fontWeight: "bold", textAlign: "center"}}>Hello</Text></TouchableOpacity>
       <StatusBar style="auto" />
     </View>
   );
