@@ -92,7 +92,6 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={{display: "flex", position: "absolute", backgroundColor: "#36689e", width: "100%", height: "7%", top: "0px"}}></View>
-      <TouchableOpacity onPress={() => console.log("")/*() => setbgColor(changeBgColor())*/}style={{width: 150, height: 50, backgroundColor: "red", borderRadius: "20px"}}><Text style={{margin: "auto", fontSize:"30px", fontWeight: "bold", textAlign: "center"}}>Hello</Text></TouchableOpacity>
       <TouchableOpacity style={{display: "flex", position: "absolute", width: "100%", height: "100%", left: "-5px"}} onPress={navBarAnim}>
         <Animated.View style={{display: "flex", position: "absolute", backgroundColor: "#000000", width: "5%", height: ".5%", top: "0px", left: "0px", margin: "20px", transform: [{rotate: spin,}]}}></Animated.View>
         <Animated.View style={{display: "flex", position: "absolute", backgroundColor: "#000000", width: "5%", height: ".5%", top: "10px", left: "0px", margin: "20px", transform: [{rotate: spin,}]}}></Animated.View>
@@ -105,6 +104,7 @@ export default function App() {
       <Animated.View style={{display: "flex", position: "absolute", backgroundColor: "#fff", left: navMenuX, top: "63px", width: "80%", height: "100%"/*"-340px"*/}}>
       
       </Animated.View>
+      <TouchableOpacity onPress={() => console.log("")/*() => setbgColor(changeBgColor())*/}style={{width: 150, height: 50, backgroundColor: "red", borderRadius: "20px"}}><Text style={{margin: "auto", fontSize:"30px", fontWeight: "bold", textAlign: "center"}}>Hello</Text></TouchableOpacity>
       <StatusBar style="auto" />
     </SafeAreaView>
   );
