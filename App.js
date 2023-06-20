@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, {useState, useRef, useEffect} from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, Animated, Easing, FlatList} from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Animated, Easing, FlatList, SafeAreaView} from 'react-native';
 
 var colorIndex = 0;
 export default function App() {
@@ -90,8 +90,9 @@ export default function App() {
     </View>
   )
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <View style={{display: "flex", position: "absolute", backgroundColor: "#36689e", width: "100%", height: "7%", top: "0px"}}></View>
+      <TouchableOpacity onPress={() => console.log("")/*() => setbgColor(changeBgColor())*/}style={{width: 150, height: 50, backgroundColor: "red", borderRadius: "20px"}}><Text style={{margin: "auto", fontSize:"30px", fontWeight: "bold", textAlign: "center"}}>Hello</Text></TouchableOpacity>
       <TouchableOpacity style={{display: "flex", position: "absolute", width: "100%", height: "100%", left: "-5px"}} onPress={navBarAnim}>
         <Animated.View style={{display: "flex", position: "absolute", backgroundColor: "#000000", width: "5%", height: ".5%", top: "0px", left: "0px", margin: "20px", transform: [{rotate: spin,}]}}></Animated.View>
         <Animated.View style={{display: "flex", position: "absolute", backgroundColor: "#000000", width: "5%", height: ".5%", top: "10px", left: "0px", margin: "20px", transform: [{rotate: spin,}]}}></Animated.View>
@@ -102,15 +103,10 @@ export default function App() {
         <Animated.View style={{display: "flex", position: "absolute", backgroundColor: "#000000", width: "5%", height: ".5%", top: "20px", left: "20px", margin: "20px", transform: [{rotate: spin1,}]}}></Animated.View>
       </TouchableOpacity>
       <Animated.View style={{display: "flex", position: "absolute", backgroundColor: "#fff", left: navMenuX, top: "63px", width: "80%", height: "100%"/*"-340px"*/}}>
-        <FlatList
-        data={navBarData}
-        renderItem={({item}) => <navBarItem title={item.title} />}
-
-        />
+      
       </Animated.View>
-      <TouchableOpacity onPress={() => console.log("")/*() => setbgColor(changeBgColor())*/}style={{width: 150, height: 50, backgroundColor: "red", borderRadius: "20px"}}><Text style={{margin: "auto", fontSize:"30px", fontWeight: "bold", textAlign: "center"}}>Hello</Text></TouchableOpacity>
       <StatusBar style="auto" />
-    </View>
+    </SafeAreaView>
   );
 }
 
@@ -126,5 +122,5 @@ const styles = StyleSheet.create({
     padding: 20,
     marginVertical: 8,
     marginHorizontal: 16,
-  },
+  },  
 });
