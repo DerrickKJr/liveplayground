@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/liveplayground/static/js/main.1df03e6e.js",
+    "main.js": "/liveplayground/static/js/main.8ec37525.js",
     "static/js/985.124cd12e.js": "/liveplayground/static/js/985.124cd12e.js",
     "favicon.ico": "/liveplayground/favicon.ico",
     "index.html": "/liveplayground/index.html",
@@ -8,11 +8,11 @@
     "favicon-16.png": "/liveplayground/favicon-16.png",
     "manifest.json": "/liveplayground/manifest.json",
     "serve.json": "/liveplayground/serve.json",
-    "main.1df03e6e.js.map": "/liveplayground/static/js/main.1df03e6e.js.map",
+    "main.8ec37525.js.map": "/liveplayground/static/js/main.8ec37525.js.map",
     "985.124cd12e.js.map": "/liveplayground/static/js/985.124cd12e.js.map"
   },
   "entrypoints": [
     "static/js/985.124cd12e.js",
-    "static/js/main.1df03e6e.js"
+    "static/js/main.8ec37525.js"
   ]
 }
