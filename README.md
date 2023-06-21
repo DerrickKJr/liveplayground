@@ -19,13 +19,16 @@
    `git push -u origin main`
 
    `npm add -d gh-pages`
-5) Open the `manifest.json` file
-6) Add your site name to the `"start url"` inbetween the forward slash`/` and `?utm_source=web_app_manifest`
+5) Open the `package.json` file
+6) Add `"homepage": "http://git-user-name-here.github.io/git-repo-name-here"`  under the `'name'`
+7) Add `"deploy": "gh-pages -d web-build", predeploy": "expo export:web",` inbetween the brackets of `"scripts:"`
+8) Open the `manifest.json` file
+9) Add your site name to the `"start url"` inbetween the forward slash`/` and `?utm_source=web_app_manifest`
      *This is for users who add your site to their homepage
-7) Only push the `manifest.json`
+10) Only push the `manifest.json`
        *You may come across errors if u push the others
-8) Run the command `npx expo export:web`
-9) Run the command `npm run deploy`
+11) Run the command `npx expo export:web`
+12) Run the command `npm run deploy`
 
 
 ## How to update webpage:
